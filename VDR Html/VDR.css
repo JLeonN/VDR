@@ -1,0 +1,52 @@
+/* Estilo para un título h1 */
+.titulo {
+  font-size: 24px; /* Tamaño de fuente */
+  color: #d32f2f; /* Color del texto */
+  font-weight: bold; /* Peso de la fuente (negrita) */
+  text-align: center; /* Alineación del texto (centrado) */
+  text-transform: uppercase; /* Transformación de texto a mayúsculas */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.recursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Estilos para las cajas internas */
+.caja {
+  flex-basis: calc(33.33% - 20px); /* Ajusta el ancho de las cajas para tres columnas */
+  background-color: #0077cc;
+  color: white;
+  /* text-align: center; */
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para hacerlo responsive */
+@media screen and (max-width: 775px) {
+  .caja {
+      flex-basis: calc(50% - 20px); /* Ajusta el ancho de las cajas para dos columnas en pantallas pequeñas */
+  }
+}
+
+/* Estilos para un elemento h4 */
+.info {
+  font-size: 24px; /* Tamaño de fuente */
+  color: #af2626; /* Color del texto */
+  text-align: center; /* Alineación del texto (centrado) */
+  font-weight: bold; /* Peso de la fuente (negrita) */
+  margin-top: 10px; /* Espacio superior */
+}
+
+.recursos ul {
+  list-style: none; /* Elimina los puntitos */
+  padding-left: 0px;
+}
+
+.recursos li{
+  margin-left: 0;
+}
