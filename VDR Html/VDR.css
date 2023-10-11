@@ -1,52 +1,50 @@
-/* Estilo para un título h1 */
-.titulo {
-  font-size: 24px; /* Tamaño de fuente */
-  color: #d32f2f; /* Color del texto */
-  font-weight: bold; /* Peso de la fuente (negrita) */
-  text-align: center; /* Alineación del texto (centrado) */
-  text-transform: uppercase; /* Transformación de texto a mayúsculas */
-  margin-top: 20px; /* Espacio superior */
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.recursos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+:root {
+  --color-nav: #333;
+  --color-azul: #3774ec;
+  --tipografia-Titulo: 'Oswald', sans-serif;
+  --tipografia-Resto: 'Rubik', sans-serif;
+}
+
+
+/* Estilo para el elemento <nav> */
+.nav {
+  background-color: var(--color-nav);
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Estilos para las cajas internas */
-.caja {
-  flex-basis: calc(33.33% - 20px); /* Ajusta el ancho de las cajas para tres columnas */
-  background-color: #0077cc;
-  color: white;
-  /* text-align: center; */
-  padding: 20px;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-/* Estilos para hacerlo responsive */
-@media screen and (max-width: 775px) {
-  .caja {
-      flex-basis: calc(50% - 20px); /* Ajusta el ancho de las cajas para dos columnas en pantallas pequeñas */
+@media (max-width: 600px) {
+  .icono {
+    margin: auto;
   }
 }
 
-/* Estilos para un elemento h4 */
-.info {
-  font-size: 24px; /* Tamaño de fuente */
-  color: #af2626; /* Color del texto */
-  text-align: center; /* Alineación del texto (centrado) */
-  font-weight: bold; /* Peso de la fuente (negrita) */
-  margin-top: 10px; /* Espacio superior */
+/* Estilo para el icono */
+.icono {
+  padding-left: 3px;
+  width: 50px;
+  height: 50px;
+  color: rgb(231, 231, 231);
 }
 
-.recursos ul {
-  list-style: none; /* Elimina los puntitos */
-  padding-left: 0px;
+.titulo {
+  font-family: var(--tipografia-Titulo);
+  color: var(--color-azul);
+  padding: 10px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-.recursos li{
-  margin-left: 0;
+
+
+.hidden {
+  display: none;
 }
