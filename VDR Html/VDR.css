@@ -34,6 +34,7 @@
   color: rgb(231, 231, 231);
 }
 
+/* Estilo para el titulo */
 .titulo {
   font-family: var(--tipografia-Titulo);
   color: var(--color-azul);
@@ -43,8 +44,30 @@
   text-align: center;
 }
 
-
-
 .hidden {
   display: none;
+}
+
+/* Estilo para el contenedor de informacion principal */
+.con-info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--tipografia-Resto);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  max-width: 600px
+}
+
+@media (max-width: 768px) {
+  .con-info {
+    max-width: 100%;
+  }
 }
