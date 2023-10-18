@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .icono {
     margin: auto;
   }
@@ -49,25 +49,33 @@
 }
 
 /* Estilo para el contenedor de informacion principal */
-.con-info {
+.todo {
   background-color: #f4f4f4;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding-right: 150px;
+  padding-left: 150px;
   font-family: var(--tipografia-Resto);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 10px;
-  max-width: 600px
 }
 
-@media (max-width: 768px) {
+.con-info {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .todo {
+    padding: 10px;
+  }
+
   .con-info {
-    max-width: 100%;
+    padding: 10px;
   }
 }
