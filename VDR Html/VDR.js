@@ -1,36 +1,47 @@
-// document.getElementById('cargarContenido').addEventListener('click', function () {
-//   fetch('ramcopia.html')
-//     .then(response => response.text())
-//     .then(data => {
-//       document.getElementById('contenedor').innerHTML = data;
-//     });
-// });
+// Función para mostrar o ocultar la lista
+
+// Ram
+function mostrarListaRam() {
+  let lista = document.getElementById("miListaRam");
+  lista.style.display = (lista.style.display === "block") ? "none" : "block";
+}
+
+// Procesador
+function mostrarListaProcesador() {
+  let lista = document.getElementById("miListaProcesador");
+  lista.style.display = (lista.style.display === "block") ? "none" : "block";
+}
+
+// Disco duro
+function mostrarListaDiscoDuro() {
+  let lista = document.getElementById("miListaDiscoDuro");
+  lista.style.display = (lista.style.display === "block") ? "none" : "block";
+}
 
 
+// Ram
+fetch('./Datos/Ram.html')
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (data) {
+    document.getElementById('miListaRam').innerHTML = data;
+  });
 
+// Procesador
+fetch('./Datos/Procesador.html')
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (data) {
+    document.getElementById('miListaProcesador').innerHTML = data;
+  });
 
-// document.getElementById("toggle-button").addEventListener("click", function () {
-//   var menu = document.getElementById("menu");
-//   if (menu.classList.contains("hidden")) {
-//     menu.classList.remove("hidden");
-//     this.textContent = "Ocultar Menú";
-//   } else {
-//     menu.classList.add("hidden");
-//     this.textContent = "Mostrar Menú";
-//   }
-// });
-
-
-
-
-// Obtén una referencia al elemento con id "contenido"
-var contenidoDiv = document.getElementById("contenido");
-
-// Crea un nuevo elemento div para el contenido HTML que deseas insertar
-var nuevoContenido = document.createElement("div");
-
-// Agrega el código HTML que deseas insertar
-nuevoContenido.innerHTML = "<p>lol</p>";
-
-// Agrega el nuevo contenido al div con id "contenido"
-contenidoDiv.appendChild(nuevoContenido);
+// DiscoDuro
+fetch('./Datos/DiscoDuro.html')
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (data) {
+    document.getElementById('miListaDiscoDuro').innerHTML = data;
+  });

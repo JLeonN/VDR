@@ -4,8 +4,13 @@
 }
 
 :root {
-  --color-nav: #333;
-  --color-azul: #3774ec;
+  /* Paleta de colores */
+  --color-blanco: #ededed;
+  --color-blancoGris: #89a6b7;
+  --color-violeta: #616193;
+  --color-celeste: #5f7eb8;
+  --color-azulOscuro: #202739;
+  /* Tipografias */
   --tipografia-Titulo: 'Oswald', sans-serif;
   --tipografia-Resto: 'Rubik', sans-serif;
 }
@@ -13,7 +18,7 @@
 
 /* Estilo para el elemento <nav> */
 .nav {
-  background-color: var(--color-nav);
+  background-color: var(--color-azulOscuro);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -32,33 +37,30 @@
   padding-left: 3px;
   width: 6em;
   height: 50px;
-  color: rgb(231, 231, 231);
-
+  color: rgb(231, 231, 231)
 }
 
 /* Estilo para el titulo */
 .titulo {
   font-family: var(--tipografia-Titulo);
-  color: var(--color-azul);
+  color: var(--color-celeste);
   padding: 10px;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-
 /* Estilo para el contenedor de informacion principal */
 .todo {
-  background-color: #f4f4f4;
+  background-color: var(--color-blanco);
   padding-right: 150px;
   padding-left: 150px;
   font-family: var(--tipografia-Resto);
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  display: flex;
+  align-items: baseline;
+
 }
 
 .con-info {
@@ -70,14 +72,55 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 20rem;
 }
 
 @media (max-width: 700px) {
   .todo {
     padding: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .con-info {
     padding: 10px;
   }
+}
+
+.boton {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales para la lista */
+.lista {
+  margin: 0;
+  padding: 0;
+  align-items: baseline;
+  list-style-type: none;
+}
+
+/* Botones */
+.boton {
+  background-color: var(--color-violeta);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  color: #ffff;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.boton:hover {
+  background-color: var(--color-celeste)
+}
+
+
+
+
+/* footer */
+.pie {
+  background-color: var(--color-azulOscuro);
+  font-family: var(--tipografia-Resto);
 }
